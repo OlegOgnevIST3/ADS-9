@@ -3,7 +3,7 @@
 #define INCLUDE_BST_H_
 #include <algorithm>
 template <typename T>
-class BinarySearchTree {
+class BST {
  private:
     struct Node {
         T value;
@@ -37,7 +37,7 @@ class BinarySearchTree {
     }
 
  public:
-    BinarySearchTree() : root(nullptr) {}
+    BST() : root(nullptr) {}
     void Add(const T& value) { root = AddNode(root, value); }
     int Depth() { return HeightTree(root) - 1; }
     int Search(const T& value) {
